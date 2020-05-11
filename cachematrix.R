@@ -19,7 +19,7 @@ makeCacheMatrix <- function(x = matrix()) {
     x <<- y                             
     m <<- NULL                        
     }
-  ## fucntion that returns value of the matrix argument  
+  ## function that returns value of the matrix argument  
     get <- function() x                     
   ## function that sets value of m in parent environment
     set_inverse <- function(inverse) m <<- inverse  
