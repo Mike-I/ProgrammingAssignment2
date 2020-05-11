@@ -11,11 +11,15 @@
 ## cache its inverse for the input (which is an invertible square matrix)
 
 ## setting default input of function to be of a matrix format
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6c474aaaeaf2aaf848e0589023bc27f80027a734
 makeCacheMatrix <- function(x = matrix()) { 
   ## variable in which the inverse matrix will be stored
   m <- NULL                             
   ## function that: if the matrix is new - resets m to NULL, else - retrives inverse from the cache
+<<<<<<< HEAD
   set <- function(y) {                
     x <<- y                             
     m <<- NULL                        
@@ -31,6 +35,23 @@ makeCacheMatrix <- function(x = matrix()) {
        get = get,
        set_inverse = set_inverse,
        get_inverse = get_inverse)  
+=======
+    set <- function(y) {                
+    x <<- y                             
+    m <<- NULL                        
+    }
+  ## function that returns value of the matrix argument  
+    get <- function() x                     
+  ## function that sets value of m in parent environment
+    set_inverse <- function(inverse) m <<- inverse  
+  ## function that returns the value of m
+    get_inverse <- function() m                     
+  ## set names to call the functions with $
+    list(set = set,
+         get = get,
+         set_inverse = set_inverse,
+         get_inverse = get_inverse)  
+>>>>>>> 6c474aaaeaf2aaf848e0589023bc27f80027a734
 }
 
 ### Write a short comment describing this function
@@ -49,4 +70,8 @@ cacheSolve <- function(x, ...) {
   m <- solve(m_get)
   x$set_inverse(m)
   m      
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 6c474aaaeaf2aaf848e0589023bc27f80027a734
